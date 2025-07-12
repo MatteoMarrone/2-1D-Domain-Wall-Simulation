@@ -38,8 +38,8 @@ show_plots = False #we show the plots i.e plt.show()
 
 save_step = 10 #we save field phi values every "save_step" steps
 
-N = 1200
-L = 400.
+N = 500
+L = 100.
 h = L/N
 print(f"grid spacing: {h:.3f}")
 deta = 0.2*h
