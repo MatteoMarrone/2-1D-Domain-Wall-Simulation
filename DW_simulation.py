@@ -47,6 +47,8 @@ print(f"deta: {deta:.3f}")
 
 nmax = L/(2.*pi)
 # print("nmax instability is: ", nmax)
+# This is related with the maximum number of unstable modes when one considers at initial time a field configuration with 0 average and certain rms 
+# (see below the section "initial condition for phi")
 
 #Damping term in the evolution
 Gamma = 0.
