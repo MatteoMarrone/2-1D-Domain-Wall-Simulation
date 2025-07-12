@@ -1,12 +1,9 @@
-This program solves the equation for a 2d scalar field that comes from a double well potential, over a cosmological background, using the technique of fattening to change the dynamical equation of motion.
+This program solves the equation of motion for a 2D scalar field arising from a double-well potential, evolving over a cosmological background. The dynamical equation is modified using the fattening technique to enhance the resolution of domain walls.
 
-The spatial derivatives are calculated with a finite difference scheme, and the time evolution is done by a RK4 solver.
+Spatial derivatives are computed using a finite-difference scheme, and time evolution is performed using a 4th-order Runge–Kutta (RK4) integrator.
 
-Initially one need to specify the relevant parameters for the simulation: cosmological parameters and also numerical parameters, like the lattice size and resolution. Then what the program does is evolve in time the initial
-conditions for the field "phi" and the first derivative "dtphi", up until the final time of simulation. During the simulation, every "save_step" steps, the field configuration is saved in .npy file. 
+Before starting the simulation, the user must specify both cosmological parameters (e.g., expansion rate, scale factor behavior...), and numerical parameters (e.g., lattice size, grid resolution, time step...). Given these, the program evolves the scalar field phi, and its first time derivative, from the initial conditions, up to a specified final time. During the evolution, every "save_step" steps, the field configuration is saved in .npy format.
 
-At the end of the simulation we read the .npy files and do an animation of the time evolution of the system. We also collect the data stored during the simulation regarding the average value of the field, rms, etc., and plot
-them over time to see the evolution of relevant quantities. Finally, the mp4 files of the animation as well as the png files of the plots are saved. 
+After the simulation, the saved .npy files are used to create an animation of the time evolution of the field. Additional data recorded during the simulation (e.g., mean value of the field, RMS fluctuations) are read and plotted over time to track the evolution of relevant physical quantities. Both the animation (as an .mp4 file) and the plots (as .png files) are saved to disk.
 
-One can also use the program without having to do the animations, for example, by simply setting "anim_phi = False" initially. By doing this, the program will omit the process of creating and saving the animation of the
-time evolution of the field. Also, if one does not want to plot the data, set "plot_... = False", etcetera.
+The user can control which outputs are generated: To skip the animation, set anim_phi = False at the beginning of the program (as well as the other possible animations anim_V, anim_gradsqphi ...). To skip plotting any specific quantity, set the corresponding plot_... = False. And so on.
