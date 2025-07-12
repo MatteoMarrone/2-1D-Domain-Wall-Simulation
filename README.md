@@ -1,4 +1,4 @@
-This program solves the equation for a scalar field that comes from a double well potential, over a cosmological background, using the technique of fattening to change the dynamical equation of motion.
+This program solves the equation for a 2d scalar field that comes from a double well potential, over a cosmological background, using the technique of fattening to change the dynamical equation of motion.
 
 The spatial derivatives are calculated with a finite difference scheme, and the time evolution is done by a RK4 solver.
 
